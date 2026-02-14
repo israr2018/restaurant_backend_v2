@@ -1,4 +1,4 @@
-const CounterModel=require('../models/counterModel')
+const CounterModel=require('../models/tanant/counterModel')
 const getNextSequenceCounter = async (sequenceName) => {
     const sequenceDocument = await CounterModel.findOneAndUpdate(
         { model: sequenceName },

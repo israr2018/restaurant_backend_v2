@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const getNextSequenceCounter=require('../middleware/counter');
+const getNextSequenceCounter=require('../../middleware/counter');
 const authModel = require('./authModel');
 const OrderItemSchema = new Schema({
   name: {

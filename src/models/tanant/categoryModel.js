@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const getNextSequenceCounter = require('../middleware/counter');
+const getNextSequenceCounter = require('../../middleware/counter');
 const CategorySchema = new mongoose.Schema(
   {
     name_ar: {

@@ -1,11 +1,11 @@
 // app.js
 const express = require('express');
 const dotenv = require('dotenv');
-const menuRoute = require('./routes/menuRoute');
-const orderRoute = require('./routes/orderRoute');
-const saleHistoryRoute=require('./routes/saleHistoryRoute');
-const menuCategoryRoute = require('./routes/menuCategoryRoute');
-const authRoute=require('./routes/authRoute');
+const menuRoute = require('./tenant/routes/menuRoute');
+const orderRoute = require('./tenant/routes/orderRoute');
+const saleHistoryRoute=require('./tenant/routes/saleHistoryRoute');
+const menuCategoryRoute = require('./tenant/routes/menuCategoryRoute');
+const authRoute=require('./tenant/routes/authRoute');
 const connectDB = require('./config/db');
 const cors = require('cors');
 const { create } = require('./models/counterModel');
@@ -29,10 +29,10 @@ app.get("/",(req,res)=>{
 });
 
 // Routes
-app.use('/api/menus', menuRoute);
-app.use('/api/menu-categories', menuCategoryRoute);
-app.use('/api/orders', orderRoute);
-app.use('/api/sale-history', saleHistoryRoute);
+app.use('/api/tenant/menus', menuRoute);
+app.use('/api/tenant/menu-categories', menuCategoryRoute);
+app.use('/api/tenant/orders', orderRoute);
+app.use('/api/tenant/sale-history', saleHistoryRoute);
 app.use('/api/login', authRoute);
 
 // Listen to port
